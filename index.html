@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>Aether Code Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- PrismJS for Syntax Highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script> <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['SF Pro Display', '-apple-system', 'BlinkMacSystemFont', 'Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              glass: {
+                border: 'rgba(255, 255, 255, 0.08)',
+                surface: 'rgba(10, 10, 12, 0.6)',
+                highlight: 'rgba(255, 255, 255, 0.05)',
+              },
+            },
+            animation: {
+              'mesh': 'mesh 20s infinite alternate',
+            },
+            keyframes: {
+              mesh: {
+                '0%': { transform: 'scale(1) translate(0, 0)' },
+                '100%': { transform: 'scale(1.1) translate(-20px, -20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background: #050505;
+        color: white;
+        height: 100vh;
+        overflow: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      /* Refined Premium Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.15); 
+        border-radius: 10px;
+        border: 1px solid transparent;
+        background-clip: content-box;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.3); 
+      }
+
+      /* Ultra-Clean iOS 26 Glass */
+      .ios-glass-panel {
+        background: rgba(18, 18, 23, 0.75);
+        backdrop-filter: blur(50px) saturate(180%);
+        -webkit-backdrop-filter: blur(50px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 
+          0 40px 80px -20px rgba(0, 0, 0, 0.8),
+          inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+      }
+
+      /* Neon Syntax Highlighting Refined */
+      code[class*="language-"],
+      pre[class*="language-"] {
+        color: #e0e0e0;
+        text-shadow: none;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 13.5px;
+        line-height: 1.6;
+        direction: ltr;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        tab-size: 4;
+        hyphens: none;
+      }
+
+      /* Vivid Token Colors for Dark Glass */
+      .token.comment, .token.prolog { color: #748ca3; font-style: italic; }
+      .token.punctuation { color: #a5b3ce; }
+      .token.namespace { opacity: .7; }
+      .token.property, .token.tag, .token.constant { color: #ff79c6; }
+      .token.boolean, .token.number { color: #bd93f9; }
+      .token.selector, .token.attr-name, .token.string, .token.char, .token.builtin { color: #f1fa8c; }
+      .token.operator, .token.entity, .token.url { color: #ff79c6; }
+      .token.atrule, .token.attr-value, .token.keyword { color: #8be9fd; font-weight: 600; }
+      .token.function, .token.class-name { color: #50fa7b; }
+      .token.regex, .token.important, .token.variable { color: #ffb86c; }
+      
+      .selection-highlight {
+        background: rgba(139, 233, 253, 0.15);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

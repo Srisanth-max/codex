@@ -1,0 +1,5 @@
+{
+  "name": "Aether Code Studio",
+  "description": "A futuristic, iOS-glassmorphism styled code editor and runner powered by Gemini. Features intelligent code analysis, simulated multi-language execution, and a VS Code-inspired editing environment.",
+  "requestFramePermissions": []
+}
